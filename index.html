@@ -9,12 +9,19 @@
 <body>
   <h1>🎁 Meine Wunschliste</h1>
 
-  <form id="wish-form">
-    <input type="text" id="title" placeholder="Wunsch-Titel" required />
-    <input type="url" id="link" placeholder="Link (https://...)" required />
-    <input type="number" id="priority" placeholder="Wunschstärke (1–10)" min="1" max="10" required />
-    <button type="submit">Hinzufügen</button>
-  </form>
+  <div id="mode-select">
+    <button id="mode-wish">Ich bin der Wünschende</button>
+    <button id="mode-giver">Ich bin der Schenkende</button>
+  </div>
+
+  <div id="wish-area" style="display:none;">
+    <form id="wish-form">
+      <input type="text" id="title" placeholder="Wunsch-Titel" required />
+      <input type="url" id="link" placeholder="Link (https://...)" required />
+      <input type="number" id="priority" placeholder="Wunschstärke (1–10)" min="1" max="10" required />
+      <button type="submit">Hinzufügen</button>
+    </form>
+  </div>
 
   <ul id="wish-list"></ul>
 
