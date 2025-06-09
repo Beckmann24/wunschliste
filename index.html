@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meine Wunschliste</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>🎁 Meine Wunschliste</h1>
+
+  <form id="wish-form">
+    <input type="text" id="title" placeholder="Wunsch-Titel" required />
+    <input type="url" id="link" placeholder="Link (https://...)" required />
+    <input type="number" id="priority" placeholder="Wunschstärke (1–10)" min="1" max="10" required />
+    <button type="submit">Hinzufügen</button>
+  </form>
+
+  <ul id="wish-list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
