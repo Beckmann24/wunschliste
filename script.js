@@ -5,7 +5,7 @@ const modeSelect = document.getElementById("mode-select");
 
 let isWisher = false;
 
-// Wunsch speichern und neu anzeigen
+// Funktion zum Hinzufügen eines Wunsches
 function addWish(title, link, priority) {
   const li = document.createElement("li");
 
@@ -32,8 +32,9 @@ function addWish(title, link, priority) {
 
     editBtn.addEventListener("click", () => {
       const newTitle = prompt("Neuer Titel:", title);
-      const newLink = prompt("Neuer Link:", link);
+      const newLink = prompt("Neuer Link (https://...):", link);
       const newPriority = prompt("Neue Wunschstärke (1–10):", priority);
+
       if (newTitle && newLink && newPriority >= 1 && newPriority <= 10) {
         linkElem.textContent = newTitle;
         linkElem.href = newLink;
@@ -54,20 +55,21 @@ function addWish(title, link, priority) {
   list.appendChild(li);
 }
 
-// Formular abschicken
+// Formular absenden
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const title = document.getElementById("title").value;
-  const link = document.getElementById("link").value;
+  const title = document.getElementById("title").value.trim();
+  const link = document.getElementById("link").value.trim();
   const priority = document.getElementById("priority").value;
 
-  addWish(title, link, priority);
+  if (!title || !link || !priority) return;
 
+  addWish(title, link, priority);
   form.reset();
 });
 
-// Modus auswählen
+// Moduswahl
 document.getElementById("mode-wish").addEventListener("click", () => {
   isWisher = true;
   wishArea.style.display = "block";

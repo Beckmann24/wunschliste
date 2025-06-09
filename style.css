@@ -3,8 +3,9 @@ body {
   max-width: 600px;
   margin: 2rem auto;
   padding: 1rem;
-  background: #f0f0f0;
+  background: #f9f9f9;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -37,9 +38,11 @@ li {
 
 .priority {
   font-weight: bold;
+  margin-top: 0.3rem;
 }
 
-button.delete-btn, button.edit-btn {
+button.delete-btn,
+button.edit-btn {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
   background-color: #e74c3c;
@@ -70,5 +73,6 @@ button.edit-btn:hover {
 #mode-select button {
   margin: 0 0.5rem;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
 }
