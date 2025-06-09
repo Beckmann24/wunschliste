@@ -3,20 +3,13 @@ body {
   max-width: 600px;
   margin: 2rem auto;
   padding: 1rem;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
 }
 
 form {
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 input, button {
@@ -30,49 +23,19 @@ ul {
 }
 
 li {
-  background: white;
-  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
   border-radius: 8px;
-  margin-bottom: 0.5rem;
 }
 
 .priority {
   font-weight: bold;
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
 }
 
-button.delete-btn,
-button.edit-btn {
+button.edit-btn,
+button.delete-btn {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button.edit-btn {
-  background-color: #3498db;
-}
-
-button.delete-btn:hover {
-  background-color: #c0392b;
-}
-
-button.edit-btn:hover {
-  background-color: #2980b9;
-}
-
-#mode-select {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-#mode-select button {
-  margin: 0 0.5rem;
-  font-size: 1rem;
-  padding: 0.5rem 1.2rem;
-  cursor: pointer;
 }

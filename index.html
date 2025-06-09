@@ -2,23 +2,41 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meine Wunschliste</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wunschliste</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAJ12Hl47YjqxY94gZfIapdLF0gWMBxtCM",
+      authDomain: "wunschliste-4f743.firebaseapp.com",
+      projectId: "wunschliste-4f743",
+      storageBucket: "wunschliste-4f743.appspot.com",
+      messagingSenderId: "258390811836",
+      appId: "1:258390811836:web:bbe4760df3c8b488501cb9"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
 </head>
 <body>
-  <h1>🎁 Meine Wunschliste</h1>
-
   <div id="mode-select">
+    <h2>Bist du der Wünschende oder der Schenkende?</h2>
     <button id="mode-wish">Ich bin der Wünschende</button>
     <button id="mode-giver">Ich bin der Schenkende</button>
   </div>
 
-  <div id="wish-area" style="display:none;">
+  <div id="wish-area" style="display: none;">
+    <h1>Meine Wunschliste</h1>
     <form id="wish-form">
-      <input type="text" id="title" placeholder="Wunsch-Titel" required />
+      <input type="text" id="title" placeholder="Titel" required />
       <input type="url" id="link" placeholder="Link (https://...)" required />
-      <input type="number" id="priority" placeholder="Wunschstärke (1–10)" min="1" max="10" required />
+      <input type="number" id="priority" min="1" max="10" placeholder="Wunschstärke (1-10)" required />
       <button type="submit">Hinzufügen</button>
     </form>
   </div>
